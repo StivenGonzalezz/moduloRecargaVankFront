@@ -1,0 +1,142 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Fondo de la página */
+  body {
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+  }
+
+  /* Contenedor del formulario */
+  #form-checkout {
+    max-width: 500px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+  }
+
+  .tittleDiv{
+    padding-left: 5rem;
+    display: flex;
+    width: 100%;
+  }
+  #form-checkout:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Título del formulario */
+  #form-checkout h2 {
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 2em;
+  }
+
+  #tittle{
+    font-weight: bolder;
+    color: #faef00;
+    border-color: red;
+  }
+
+  .imgVank{
+    width:10vh;
+    margin:0 0;
+  }
+
+  /* Estilo de cada sección */
+  .form-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  /* Etiquetas flotantes */
+  .form-group label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    background: #ffffff;
+    padding: 0 5px;
+    transform-origin: top left;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+
+  /* Campos de entrada */
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group select {
+    width: 100%;
+    padding: 12px;
+    padding-top: 20px;
+    font-size: 1em;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+
+  /* Efecto de enfoque */
+  .form-group input[type="text"]:focus,
+  .form-group input[type="email"]:focus,
+  .form-group select:focus {
+    border-color: #007bff;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.1);
+  }
+
+  /* Animación de la etiqueta flotante */
+  .form-group input[type="text"]:focus + label,
+  .form-group input[type="email"]:focus + label,
+  .form-group select:focus + label,
+  .form-group input[type="text"]:not(:placeholder-shown) + label,
+  .form-group input[type="email"]:not(:placeholder-shown) + label,
+  .form-group select:not(:placeholder-shown) + label {
+    top: -8px;
+    left: 10px;
+    font-size: 0.75em;
+    color: #007bff;
+  }
+
+  /* Campo oculto */
+  .hidden-field {
+    display: none;
+  }
+
+  /* Estilo del botón de envío */
+  button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #faef00;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #000000;
+  }
+
+  /* Estilo del campo de selección de bancos */
+  #banksList {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }

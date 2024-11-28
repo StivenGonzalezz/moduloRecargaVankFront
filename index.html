@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="form-checkout" action="/process_payment" method="post">
+        <div class="tittleDiv">
+            <img class="imgVank" src="./images/vankLogo.jpeg" alt="">
+            <h2 id="tittle">Recargas</h2>
+        </div>
+    
+        <div class="form-group">
+          <input id="form-checkout__zipCode" name="zipCode" type="text" placeholder=" " required>
+          <label for="zipCode">Código Postal</label>
+        </div>
+    
+        <div class="form-group">
+          <input id="form-checkout__streetName" name="streetName" type="text" placeholder=" " required>
+          <label for="streetName">Calle</label>
+        </div>
+    
+        <div class="form-group">
+          <input id="form-checkout__streetNumber" name="streetNumber" type="text" placeholder=" " required>
+          <label for="streetNumber">Número de Calle</label>
+        </div>
+    
+        <div class="form-group">
+          <input id="form-checkout__neighborhood" name="neighborhood" type="text" placeholder=" " required>
+          <label for="neighborhood">Barrio</label>
+        </div>
+    
+        <div class="form-group">
+          <input id="form-checkout__city" name="city" type="text" placeholder=" " required>
+          <label for="city">Ciudad</label>
+        </div>
+    
+        <div class="form-group">
+          <input id="form-checkout__federalUnit" name="federalUnit" type="text" placeholder=" " required>
+          <label for="federalUnit">Unidad Federal</label>
+        </div>
+    
+        <div class="form-group">
+          <input id="form-checkout__phoneAreaCode" name="phoneAreaCode" type="text" placeholder=" " required>
+          <label for="phoneAreaCode">Código de Área</label>
+        </div>
+    
+        <div class="form-group">
+          <input id="form-checkout__phoneNumber" name="phoneNumber" type="text" placeholder=" " required>
+          <label for="phoneNumber">Número de Teléfono</label>
+        </div>
+    
+        <div class="form-group">
+          <input id="form-checkout__email" name="email" type="email" placeholder=" " required>
+          <label for="email">Correo Electrónico</label>
+        </div>
+    
+        <div class="form-group">
+          <select id="form-checkout__personType" name="personType" required>
+            <option value="" disabled selected>Selecciona el tipo de persona</option>
+            <option value="natural">Natural</option>
+            <option value="juridica">Jurídica</option>
+          </select>
+          <label for="personType">Tipo de Persona</label>
+        </div>
+    
+        <div class="form-group">
+          <select id="form-checkout__identificationType" name="identificationType" required>
+            <option value="" disabled selected>Selecciona el tipo de documento</option>
+          </select>
+          <label for="identificationType">Tipo de Documento</label>
+        </div>
+
+        <div class="form-group">
+            <input id="form-checkout__transaction_amount" name="transaction_amount" type="text" placeholder=" " required>
+            <label for="transaction_amount">Cantidad a depositar</label>
+          </div>
+    
+        <div class="form-group">
+          <input id="form-checkout__identificationNumber" name="identificationNumber" type="text" placeholder=" " required>
+          <label for="identificationNumber">Número del Documento</label>
+        </div>
+    
+        <div class="form-group">
+          <div id="banksList">Banco</div> 
+        </div>
+    
+        <!-- Campos ocultos para detalles de la transacción -->
+        <input type="hidden" name="transactionAmount" id="transactionAmount" value="5000">
+        <input type="hidden" name="description" id="description" value="Vank Recarga">
+    
+        <button type="submit">Pagar</button>
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>
